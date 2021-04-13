@@ -10,11 +10,17 @@ warnings.simplefilter('ignore')
 
 class ATD:
 
-    PRIORITY_DICT = {0: 'add_to_q', 1: 'run_now'}
-    STATUS_DICT = {5: 'Sample has finished being analyzed.', 3: 'Sample is currently being analyzed.',
-                   2: 'Sample is waiting to be analyzed.',
-                   0: 'Sample has been submitted but is waiting to be put in the queue.',
-                   -1: 'Sample failed during the analysis process.'}
+    PRIORITY_DICT = {
+        0: 'add_to_q', 
+        1: 'run_now'
+    }
+    STATUS_DICT = {
+        5: 'Sample has finished being analyzed.',
+        3: 'Sample is currently being analyzed.',
+        2: 'Sample is waiting to be analyzed.',
+        0: 'Sample has been submitted but is waiting to be put in the queue.',
+        -1: 'Sample failed during the analysis process.'
+    }
 
     def __init__(self, username, password, ip):
         self.ip = ip
